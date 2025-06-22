@@ -1,0 +1,343 @@
+/* Kanye Mitchell Create a Valid CSS stylesheet 6/8/2025 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Set all main heading to a certain size font */
+#main-heading {
+  font-size: 2.5rem;
+  text-align: center;
+}
+/* Sets up a base font and backgorund for the entire website */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #EFE1D1;
+  color: #2C2C2C;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* === Header & Nav === */
+/* This styles the top header of the site of every webpage */
+header {
+  background-color: #1E2A38;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100px; /* ensures decent height */
+}
+/* Handles the header logo size and shape */
+header img {
+  width: 100px;
+  border-radius: 50px;
+  background-color: #F5E9DC;
+  padding: 0.25rem;
+}
+/* Is the nav code section which will setup all the navigation looks. */
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem; /* increase spacing between buttons */
+  list-style: none;
+}
+
+nav a {
+  display: block;
+  background-color: #1E2A38;
+  color: white;
+  padding: 0.9rem 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.75rem; /* bumped up from 1rem */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+/* Add a hover effect to all all navigation buttons/links */
+
+nav a:hover {
+  background-color: #4A90E2;
+}
+
+
+/* === Hero Image and Text === */
+/* Styles the main image and text on the homepage and allow the image to fit properly*/
+.hero-image {
+  position: relative;
+  overflow:clip;
+  width: 100%;
+  max-height: 450px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-text {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #EFE1D1;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  color: #2C2C2C;
+}
+
+/* === Featured Study Spots (Home Page) === */
+/* Styles all the featre spots on the Home Page */
+.featured-spots {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.featured-spots .spot img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* === Form Page Layout === */
+/* This will style the look of the forms page
+Section was changed a lot instead of doing content on the left and right sections.
+It was moved into a centered top to bottom to make the layout simple and cleaner. */
+
+.form-centered {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+.form-subtext {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+/* centers all labels on the forms page */
+.form-centered label {
+  font-weight: bold;
+}
+/* centers the input areas to try and give the forms page a better look.*/
+.form-centered input[type="text"],
+.form-centered textarea,
+.form-centered input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 1rem;
+}
+/* Styles the rating system. Changed from the trying to add stars */
+.rating {
+  display: flex;
+  justify-content: space-between;
+  max-width: 300px;
+  gap: 15px;
+  margin: 0 auto;
+}
+
+.form-submit {
+  text-align: center;
+}
+/* Added in for the Form Validation Section styles all errors messages
+Displayed from the spanning tags on the forms page. */
+.error-message {
+  color: red;
+  font-size: 0.85rem;
+}
+
+.page-title_forms {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 2rem 0 1rem;
+  color: #2C2C2C;
+}
+
+.form-section form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+
+.form-submit {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  
+}
+button {
+  width: 200px;
+}
+
+input, textarea, button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+button {
+  background-color: #1E2A38;
+  color: #FFFFFF;
+  cursor: pointer;
+  border: none;
+}
+/* Sets a hover effect on the submit button*/
+button[type="submit"]:hover {
+  background-color: #1e3a5f;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 4px;
+  display: block;
+}
+input[type="text"],
+textarea,
+input[type="file"] {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 2rem;
+  border: 1px solid #1E2A38;
+  border-radius: 8px;
+  box-sizing: content-box;
+  margin-bottom: 20px;
+}
+input[type="file"] {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 2px dashed #bbb;
+  padding: 10px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+/* Adds hover effects to all the input boxes when selected */
+input[type="file"]::file-selector-button {
+  background-color: #132030;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: #1e3a5f;
+}
+
+
+
+/* === Study Spots Page === */
+.page-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 2rem 0 1rem;
+  color: #2C2C2C;
+}
+
+.spot-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.spot img {
+  width: 250px; /* Change from 350px to fit better of the page */
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.spot p {
+  max-width: 250px; /* Change from 200px */
+}
+
+/* === About Page === */
+main h2, main h3 {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+main p {
+  max-width: 600px;
+  margin: 0 auto 1rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+/* === Footer === */
+/* Styles the entire footer section accross all pages */
+footer {
+  background-color: #1E2A38;
+  color: white;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-logo img {
+  height: auto;
+  width: 150px;
+  border-radius: 100px;
+  background-color: #F5E9DC;
+  padding: 0.25rem;
+}
+
+.footer-text {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 600px;
+  margin-top: 1rem;
+}
+
+/* === Responsive === */
+/* Adjust the main size of content on the screen.
+   Can vary depending upon user screen error zoom settings */
+@media (max-width: 1360px)/* Change from 768px Found 1360px to yield the best results */ {
+  .featured-spots, .spot-list, .form-section form, header, footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-left, .form-right {
+    width: 100%;
+  }
+
+  .footer-text {
+    text-align: center;
+  }
+/* Centers navigation links */
+  nav ul {
+    justify-content: center;
+  }
+}
